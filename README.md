@@ -62,14 +62,15 @@ Later stages will add the commands for regenerating the synthetic data, running 
 ## Assumptions
 
 1000 seed average, y = 2.0 * x + 5.0 + noise
+Predicted slope spread = 1 / (sqrt(200) × sd(x)), with sd(x) = 10/sqrt(12) ≈ 2.89 → ≈ 0.0245
 
-sd = 10/$\sqrt{12}$ ~ 2.89, spread = 1/($\sqrt{200}$ * 2.89) ~ 0.02394 
+sd = 10/$\sqrt{12} ~ 2.89, spread = 1/(\sqrt{200}$ * 2.89) ~ 0.02394
 
 x = rng.uniform(0,10,size=200)
 slope mean 2.000689970672969 sd 0.023942543264354205
 intercept mean 4.995850597035213 sd 0.13745348130874738
 
-sd = 1/$\sqrt{12}$ ~ 0.289, spread = 1/($\sqrt{200}$ * 0.289) ~ 0.2394 
+sd = 1/$\sqrt{12} ~ 0.289, spread = 1/(\sqrt{200}$ * 0.289) ~ 0.2394 
 
 x = rng.uniform(0,1,size=200)
 slope mean 2.006899706729692 sd 0.2394254326435423
