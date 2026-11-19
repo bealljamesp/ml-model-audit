@@ -57,3 +57,14 @@ pytest
 ```
 
 Later stages will add the commands for regenerating the synthetic data, running the analyses, and building the Docker image. None of those exist yet.
+
+
+## Assumptions
+
+x = rng.uniform(0,10,size=100)
+slope mean 2.000689970672969 sd *0.023942543264354205*
+intercept mean 4.995850597035213 sd 0.13745348130874738
+
+x = rng.uniform(0,10,size=1)
+slope mean 2.006899706729692 sd *0.2394254326435423*
+intercept mean 4.995850597035213 sd 0.13745348130874732
