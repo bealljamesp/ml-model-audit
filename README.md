@@ -67,3 +67,17 @@ Later stages will add the commands for regenerating the synthetic data, running 
 x = rng.uniform(0,10,size=200)
 slope mean 2.000689970672969 sd 0.023942543264354205
 intercept mean 4.995850597035213 sd 0.13745348130874738
+
+- Supervised linear regression over 1000 seeds
+
+Expected:
+
+slope spread ≈ 1/(sqrt(150)*2.89) ≈ 0.028
+intercept spread ≈ 1/(sqrt(150)+25/1250) ≈ 0.163
+R2 mean near 0.97
+
+Observed:
+
+Mean slope: 2.0007, sd: 0.0279
+Mean intercept: 4.9945, sd: 0.1610
+Mean R^2: 0.9694, sd: 0.0075
