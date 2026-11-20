@@ -30,7 +30,7 @@ Each item is marked built, partial, or not started. An item goes on a resume onl
 | 1 | Repo scaffold, pytest runs | partial (scaffold committed on branch; pytest passes) |
 | 2 | UCI Online Retail II data obtained and sourced | not started (blocked, see Data sources) |
 | 3 | Synthetic generator, ground-truth file, reproducibility tests | built (recovery checked at one seed only) |
-| 4 | Supervised models (scikit-learn) | not started |
+| 4 | Supervised models (scikit-learn) | In Progress (Linear Regression built) |
 | 5 | Evaluation: CV, ROC/AUC, precision/recall, calibration, tuning | not started |
 | 6 | Unsupervised: k-means, hierarchical, DBSCAN, PCA, Isolation Forest | not started |
 | 7 | SHAP explainability | not started |
