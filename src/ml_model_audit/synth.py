@@ -46,16 +46,24 @@ import json
 from pathlib import Path
 
 
-def ground_truth():
+def ground_truth(
+    seed=SEED,
+    n_rows=N_ROWS,
+    x_low=X_LOW,
+    x_high=X_HIGH,
+    planted_slope=PLANTED_SLOPE,
+    planted_intercept=PLANTED_INTERCEPT,
+    noise_std=NOISE_STD,
+):
     """return the ground truth dictionary for the planted effect"""
     return {
-        "seed": SEED,
-        "n_rows": N_ROWS,
-        "x_low": X_LOW,
-        "x_high": X_HIGH,
-        "planted_slope": PLANTED_SLOPE,
-        "planted_intercept": PLANTED_INTERCEPT,
-        "noise_std": NOISE_STD,
+        "seed": seed,
+        "n_rows": n_rows,
+        "x_low": x_low,
+        "x_high": x_high,
+        "planted_slope": planted_slope,
+        "planted_intercept": planted_intercept,
+        "noise_std": noise_std,
         "numpy_version": np.__version__,
     }
 

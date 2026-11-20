@@ -19,7 +19,7 @@ def test_recovers_planted_effect_within_tolerance():
 
 import json
 
-from ml_model_audit.synth import write_ground_truth
+from ml_model_audit.synth import ground_truth, write_ground_truth
 
 
 def test_ground_truth_records_planted_values(tmp_path):
@@ -27,3 +27,9 @@ def test_ground_truth_records_planted_values(tmp_path):
     record = json.loads(file_path.read_text())
     assert record["planted_slope"] == PLANTED_SLOPE
     assert record["seed"] == 42
+
+
+def test_ground_truth_matches_non_default_arguments():
+    x, _ = generate(n_rows=50)
+    record = ground_truth(n_rows=50)
+    assert len(x) == record["n_rows"] == 50
