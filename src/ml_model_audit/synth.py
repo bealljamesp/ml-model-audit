@@ -40,3 +40,29 @@ def generate(
     noise = rng.normal(loc=0.0, scale=noise_std, size=n_rows)
     y = slope * x + intercept + noise
     return x, y
+
+
+import json
+from pathlib import Path
+
+
+def ground_truth():
+    """return the ground truth dictionary for the planted effect"""
+    return {
+        "seed": SEED,
+        "n_rows": N_ROWS,
+        "x_low": X_LOW,
+        "x_high": X_HIGH,
+        "planted_slope": PLANTED_SLOPE,
+        "planted_intercept": PLANTED_INTERCEPT,
+        "noise_std": NOISE_STD,
+        "numpy_version": np.__version__,
+    }
+
+
+def write_ground_truth(file_path="data/ground_truth.json"):
+    """save the ground truth dictionary to a JSON file"""
+    file_path = Path(file_path)
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    file_path.write_text(json.dumps(ground_truth(), indent=4))
+    return file_path

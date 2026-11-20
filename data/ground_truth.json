@@ -1,0 +1,10 @@
+{
+    "seed": 42,
+    "n_rows": 200,
+    "x_low": 0,
+    "x_high": 10,
+    "planted_slope": 2.0,
+    "planted_intercept": 5.0,
+    "noise_std": 1.0,
+    "numpy_version": "2.5.5"
+}
