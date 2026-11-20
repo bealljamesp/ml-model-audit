@@ -1,3 +1,13 @@
+"""Fit one linear regression on one synthetic dataset and report its test score.
+
+Uses the default seed (42) and a 75/25 train/test split. A single split can
+land far from the planted values, so this is a first look, not evidence.
+See multiseed_linear.py for the spread across seeds.
+
+Run from the repo root:
+    PYTHONPATH=src python scripts/linear_baseline.py
+"""
+
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
@@ -13,6 +23,12 @@ y_pred = model.predict(x_test)
 
 print(f"Slope: {model.coef_[0]:.4f}, intercept: {model.intercept_:.4f}")
 print(f"test R^2: {model.score(x_test, y_test):.4f}")
+
+# Observed
+# Slope: 2.0687, intercept: 4.5807
+# test R^2: 0.9690
+# Slope is low, more seeds needed to get a reliable estimate -> multiseed_linear.py
+
 
 # R^2 = var(signal)/(var(signal) + var(noise))
 # signal = slope*x
